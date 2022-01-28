@@ -1,5 +1,8 @@
 class User < ApplicationRecord
 	has_many :questions
+	has_many :api_keys, as: :bearer
 
-	validates :name, presence: true
+	validates :username, presence: true
+
+	has_secure_password
 end

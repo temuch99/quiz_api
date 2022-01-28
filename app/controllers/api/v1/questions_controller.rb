@@ -1,9 +1,7 @@
-module Api
-	module V1
-		class QuestionsController < ApplicationController
-			def index
-				@questions = Question.all
-			end
-		end
+class Api::V1::QuestionsController < ApplicationController
+
+	
+	def index
+		@questions = Question.all
 	end
 end

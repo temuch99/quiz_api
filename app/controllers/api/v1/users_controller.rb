@@ -1,9 +1,7 @@
-module Api
-	module V1
-		class UsersController < ApplicationController
-			def index
-				@users = User.all
-			end
-		end
+class Api::V1::UsersController < ApplicationController
+	before_action :authenticate_with_api_key!
+
+	def index
+		@users = User.all
 	end
 end
